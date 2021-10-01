@@ -21,9 +21,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#!">BookNow</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">AboutUs</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../MainPage/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../BookingPage/index.html">BookNow</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">AboutUs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">ContactUs</a></li>
                     </ul>
                     <form class="d-flex">
@@ -52,19 +52,41 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- <img class="card-img-top" src="./images/t1.jpg" alt="..." /> -->
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./images/t1.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./images/t2.jpeg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./images/t3.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <h5 class="fw-bolder">Sir JP Sports Arena</h5>
                                     <!-- Product price-->
-                                    $40.00 - $80.00
+                                    <p>Malad(West)</p>
+                                    Cricket,Footbal(6v6)
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="../Turfblog/index.html">Book Now</a></div>
                             </div>
                         </div>
                     </div>
