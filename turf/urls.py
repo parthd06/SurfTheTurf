@@ -29,5 +29,6 @@ urlpatterns = [
     path('Booked', views.Booked, name="Booked"),
     # path('email/', include(email_urls)),
     path('delete_booking/<int:id>', views.delete_booking, name="delete_booking"),
+     path('success', views.success, name='success')
     # path('sortBy', views.sortBy, name="sortBy"),
 ]

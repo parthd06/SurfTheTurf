@@ -15,7 +15,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from pytz import timezone
 import time
-
+import razorpay
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
 
@@ -45,11 +46,8 @@ def book_now(request):
 
 def turf_details(request):
     currentDate = date.today().strftime("%Y-%m-%d")
-
     endDate = (date.today() + timedelta(days=6)).strftime("%Y-%m-%d")
     return render(request, 'turfblog.html', {'currentDate': currentDate, 'endDate': endDate})
-
-
 
 
 def login(request):
@@ -448,8 +446,148 @@ def turfBilling(request):
         }
         print("Turf Billing")
         print("Matrix in Billing")
-
+        
+        
     return render(request, 'turfBilling.html', {'details': details})
+
+@csrf_exempt
+def success(request):
+    if request.method == "POST":
+        paymentDetails = request.POST   # Dictionary
+        # {
+        #     "razorpay_payment_id": "pay_29QQoUBi66xm2f",
+        #     "razorpay_order_id": "order_9A33XWu170gUtm",
+        #     "razorpay_signature": "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d"
+        # }
+
+        # Verify the Signature
+
+        keyId = 'rzp_test_xd1FZFIHjPbLjT'
+        keySecret = '0WgX8QvnLDc5SkJQzKR5rzxj'
+        client = razorpay.Client(auth=(keyId, keySecret))
+        params_dict = {
+            'razorpay_order_id': paymentDetails['razorpay_order_id'],
+            'razorpay_payment_id': paymentDetails['razorpay_payment_id'],
+            'razorpay_signature': paymentDetails['razorpay_signature']
+        }
+        # If returns None, payment is successful, else some error occured
+        check = client.utility.verify_payment_signature(params_dict)
+        print(check)
+
+        if check:
+            return render(request, 'error.html')
+
+        # If Payment is successfull done, the checkbox(Paid) is ticked in database of that user
+        order_id = paymentDetails['razorpay_order_id']
+        user = TurfBooked.objects.filter(payment_id=order_id).first()
+        print(user)
+        user.paid = True
+        user.save()
+        # bookedSlots = []
+        # for i in slots:
+        #     if i == '6-7 am':
+        #         bookedSlots.append(1)
+        #     elif i == '7-8 am':
+        #         bookedSlots.append(2)
+        #     elif i == '8-9 am':
+        #         bookedSlots.append(3)
+        #     elif i == '9-10 am':
+        #         bookedSlots.append(4)
+        #     elif i == '10-11 am':
+        #         bookedSlots.append(5)
+        #     elif i == '11-12 am':
+        #         bookedSlots.append(6)
+        #     elif i == '12-1 pm':
+        #         bookedSlots.append(7)
+        #     elif i == '1-2 pm':
+        #         bookedSlots.append(8)
+        #     elif i == '2-3 pm':
+        #         bookedSlots.append(9)
+        #     elif i == '3-4 pm':
+        #         bookedSlots.append(10)
+        #     elif i == '4-5 pm':
+        #         bookedSlots.append(11)
+        #     elif i == '5-6 pm':
+        #         bookedSlots.append(12)
+        #     elif i == '6-7 pm':
+        #         bookedSlots.append(13)
+        #     elif i == '7-8 pm':
+        #         bookedSlots.append(14)
+        #     elif i == '8-9 pm':
+        #         bookedSlots.append(15)
+        #     elif i == '9-10 pm':
+        #         bookedSlots.append(16)
+        #     elif i == '10-11 pm':
+        #         bookedSlots.append(17)
+        #     elif i == '11-12 pm':
+        #         bookedSlots.append(18)
+        #     elif i == '12-1 am':
+        #         bookedSlots.append(19)
+
+        # choosenDay = datetime.strptime(
+        #     selected_date, "%Y-%m-%d").strftime("%A")
+        # print(choosenDay)
+        # matrix = bookslot.objects.get(id='1')
+        # if choosenDay == "Monday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[0][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Tuesday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[1][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Wednesday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[2][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Thursday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[3][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Friday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[4][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Saturday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[5][int(i)] = 1
+        #                 matrix.save()
+        # elif choosenDay == "Sunday":
+        #     for i in bookedSlots:
+        #         for j in range(1, 20):
+        #             if(int(i) == j):
+        #                 matrix.week[6][int(i)] = 1
+        #                 matrix.save()
+        # book.save()
+
+
+        # return redirect('book_now')
+
+        # Sending Email
+        message_plain = render_to_string('email.txt')
+        message_html = render_to_string('email.html', {'amount': user.amount})
+
+        send_mail(
+            'Turf Booking Successful',
+            message_plain,
+            settings.EMAIL_HOST_USER,
+            [user.email],
+            html_message=message_html
+        )
+
+    return render(request, 'success.html')
 
 
 def deleteRecord(dayTobeDeleated):
@@ -489,100 +627,34 @@ def Booked(request):
         booking_time = datetime.now(
             timezone("Asia/Kolkata")).strftime('%H:%M:%S')
         print(username)
+        keyId = 'rzp_test_9e8xrjzBFp5O7M'
+        keySecret = 's4qIuVEiSi128ucHK9uAzoAU'
+
+        client = razorpay.Client(auth=(keyId, keySecret))
+
+        DATA = {
+            # Amount will be in its smallest unit, that is Paisa (Therefore multiplying by 100 to convert amount in Rs to Paisa)
+            "amount": int(total_amount)* 100,
+            "currency": "INR",
+            "receipt": 'surftheturf',
+            'notes': {
+                'Name': request.user.username,
+                'Payment_For': 'Turf Booking'
+            },
+            'payment_capture': '1'
+        }
+
+        payment = client.order.create(data=DATA)
+        print(payment)
+        turf = TurfBooked(name=username, email=email,
+                           amount=total_amount, selected_date=selected_date,current_date=current_date, booking_time=booking_time,slots=slots, payment_id=payment['id'])
+        turf.save()
+        return render(request, 'turfBilling.html', {'payment': payment})
+
         book = TurfBooked(name=username, email=email, amount=total_amount, selected_date=selected_date,
                           current_date=current_date, booking_time=booking_time, slots=slots)
 
-        bookedSlots = []
-        for i in slots:
-            if i == '6-7 am':
-                bookedSlots.append(1)
-            elif i == '7-8 am':
-                bookedSlots.append(2)
-            elif i == '8-9 am':
-                bookedSlots.append(3)
-            elif i == '9-10 am':
-                bookedSlots.append(4)
-            elif i == '10-11 am':
-                bookedSlots.append(5)
-            elif i == '11-12 am':
-                bookedSlots.append(6)
-            elif i == '12-1 pm':
-                bookedSlots.append(7)
-            elif i == '1-2 pm':
-                bookedSlots.append(8)
-            elif i == '2-3 pm':
-                bookedSlots.append(9)
-            elif i == '3-4 pm':
-                bookedSlots.append(10)
-            elif i == '4-5 pm':
-                bookedSlots.append(11)
-            elif i == '5-6 pm':
-                bookedSlots.append(12)
-            elif i == '6-7 pm':
-                bookedSlots.append(13)
-            elif i == '7-8 pm':
-                bookedSlots.append(14)
-            elif i == '8-9 pm':
-                bookedSlots.append(15)
-            elif i == '9-10 pm':
-                bookedSlots.append(16)
-            elif i == '10-11 pm':
-                bookedSlots.append(17)
-            elif i == '11-12 pm':
-                bookedSlots.append(18)
-            elif i == '12-1 am':
-                bookedSlots.append(19)
-
-        choosenDay = datetime.strptime(
-            selected_date, "%Y-%m-%d").strftime("%A")
-        print(choosenDay)
-        matrix = bookslot.objects.get(id='1')
-        if choosenDay == "Monday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[0][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Tuesday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[1][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Wednesday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[2][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Thursday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[3][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Friday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[4][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Saturday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[5][int(i)] = 1
-                        matrix.save()
-        elif choosenDay == "Sunday":
-            for i in bookedSlots:
-                for j in range(1, 20):
-                    if(int(i) == j):
-                        matrix.week[6][int(i)] = 1
-                        matrix.save()
-        book.save()
-
-
-        return redirect('book_now')
+        
 
 
 @login_required(login_url='/accounts/login')

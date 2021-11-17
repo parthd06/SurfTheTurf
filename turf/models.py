@@ -57,3 +57,6 @@ class TurfBooked(models.Model):
         models.CharField(max_length=200, default=""),
         size=20,
     )
+    
+    payment_id = models.CharField(max_length=100)
+    paid = models.BooleanField(default=False)
