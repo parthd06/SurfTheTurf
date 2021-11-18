@@ -38,11 +38,11 @@ Or
 
 
 ## Documentation:
-[Final Presentation]()
+[Final Presentation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_Final_Presentation.pptx)
 
-[Final Report]()
+[Final Report](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_FinalReport.docx.pdf)
 
-[Business Model Canvas]()
+[Business Model Canvas](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/the-business-model-canvas-1.pdf)
 
 ## Features:
 
@@ -58,7 +58,7 @@ Or
 ## Screenshots:
 Main Page:
 
-![App Screenshot1](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot1](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss1.png)
 
 ![App Screenshot2](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
