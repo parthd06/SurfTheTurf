@@ -22,7 +22,7 @@ check the availability of the turf, select timings, and view booking history.
 - [@hitanshuparekh](https://github.com/hparekh72)
 - [@bhavyesh](https://github.com/PRANAVD-10)
 
-## Demo:
+<!-- ## Demo:
 You can try it out for yourself by using the following credentials on the website:
 
 Username: 
@@ -34,7 +34,7 @@ Password:
 Or 
 
 [Checkout this Demo video]()
-
+ -->
 
 ## Documentation:
 [Final Report](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_FinalReport.docx.pdf)
