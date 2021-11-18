@@ -59,49 +59,49 @@ Main Page:
 
 ![App Screenshot1](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss1.png)
 
-![App Screenshot2](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot2](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss2.png)
 
 Sign Up Page:
 
-![App Screenshot3](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot3](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss3.png)
 
 Login Page:
 
-![App Screenshot4](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot4](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss4.png)
 
 Booking Page:
 
-![App Screenshot5](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot5](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss5.png)
 
-![App Screenshot6](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot6](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss6.png)
 
 Turf Details Page:
 
-![App Screenshot7](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot7](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss7.png)
 
-![App Screenshot8](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot8](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss8.png)
 
 Slot Booking Page:
 
-![App Screenshot9](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot9](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss9.png)
 
 Checkout Form Page:
 
-![App Screenshot10](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot10](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss10.png)
 
 Order History:
 
-![App Screenshot11](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot11](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss11.png)
 
 About Us page:
 
-![App Screenshot12](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot12](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss12.png)
 
-![App Screenshot13](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot13](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss13.png)
 
 Contact Us Page:
 
-![App Screenshot14](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot14](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss14.png)
 
 
 
