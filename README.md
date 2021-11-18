@@ -1,5 +1,5 @@
 
-# Turf Booking Website **SurfTheTurf**
+# Turf Booking Website - **SurfTheTurf**
 
 
 
@@ -52,7 +52,16 @@ Or
 - Discount Vouchers
 - Razorpay Payment Gateway
 
+## Tech Stack Used
+**Front-End:**
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Bootstrap**
 
+**Back-End:**
+- **Python(Django)**
+- **Postgre**
 
 ## Screenshots:
 Main Page:
@@ -102,19 +111,6 @@ About Us page:
 Contact Us Page:
 
 ![App Screenshot14](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss14.png)
-
-
-
-## Tech Stack Used
-**Front-End:**
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **Bootstrap**
-
-**Back-End:**
-- **Python(Django)**
-- **Postgre**
 
 
 ## References:
