@@ -64,13 +64,13 @@ Or
 - **Postgre**
 
 ## Screenshots:
-Main Page:
+**Main Page:**
 
 ![App Screenshot1](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss1.png)
 
 ![App Screenshot2](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss2.png)
 
-Sign Up Page:
+**Sign Up Page:**
 
 ![App Screenshot3](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss3.png)
 
