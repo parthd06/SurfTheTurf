@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/jpg" href="../static/images/favicon.ico"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Turf Booking</title>
+
+    <style>
+        body {
+            background-color: #E8F6EF;
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        .col:hover {
+            background-color: pink;
+        }
+
+        .row {
+            border: 1px solid blue;
+        }
+
+        .col {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="h6">Selected Date: {{selectedDate}}</p>
+    <p class="h1">Turf Timings</p>
+
+    <form action="turfBilling" method="post">
+        {% csrf_token %}
+
+        <div class="container" style="border: 1px solid blue;">
+            <input type="hidden" value="{{selectedDate}}" name="date">
+            <div class="btn-group mx-3 my-3" role="group">
+
+                {% if list.1 == '0' %}
+                <span id="1">
+                    <input type="checkbox" class="btn-check" id="btncheck1" name="id" autocomplete="off" value="1">
+                    <label class="btn btn-outline-primary" for="btncheck1">6-7 am</label>
+                    {% endif%}
+                </span>
+                {% if list.2 == '0' %}
+                <span id="2">
+                    <input type="checkbox" class="btn-check" id="btncheck2" name="id" autocomplete="off" value="2">
+                    <label class="btn btn-outline-primary" for="btncheck2">7-8 am</label>
+                    {% endif%}
+                </span>
+
+                {% if list.3 == '0' %}
+                <span id="3">
+                    <input type="checkbox" class="btn-check" id="btncheck3" name="id" autocomplete="off" value="3">
+                    <label class="btn btn-outline-primary" for="btncheck3">8-9 am</label>
+                    {% endif%}
+                </span>
+
+                {% if list.4 == '0' %}
+                <span id="4">
+                    <input type="checkbox" class="btn-check" id="btncheck4" name="id" autocomplete="off" value="4">
+                    <label class="btn btn-outline-primary" for="btncheck4">9-10 am</label>
+                    {% endif%}
+                </span>
+
+                {% if list.5 == '0' %}
+                <span id="5">
+                    <input type="checkbox" class="btn-check" id="btncheck5" name="id" autocomplete="off" value="5">
+                    <label class="btn btn-outline-primary" for="btncheck5">10-11 am</label>
+                    {% endif%}
+                </span>
+
+                {% if list.6 == '0' %}
+                <span id="6">
+                    <input type="checkbox" class="btn-check" id="btncheck6" name="id" autocomplete="off" value="6">
+                    <label class="btn btn-outline-primary" for="btncheck6">11-12 am</label>
+                </span>
+                {% endif%}
+
+                {% if list.7 == '0' %}
+                <span id="7">
+                    <input type="checkbox" class="btn-check" id="btncheck7" name="id" autocomplete="off" value="7">
+                    <label class="btn btn-outline-primary" for="btncheck7">12-1 pm</label>
+                </span>
+                {% endif%}
+
+                {% if list.8 == '0' %}
+                <span id="8">
+                    <input type="checkbox" class="btn-check" id="btncheck8" name="id" autocomplete="off" value="8">
+                    <label class="btn btn-outline-primary" for="btncheck8">1-2 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.9 == '0' %}
+                <span id="9">
+                    <input type="checkbox" class="btn-check" id="btncheck9" name="id" autocomplete="off" value="9">
+                    <label class="btn btn-outline-primary" for="btncheck9">2-3 pm</label>
+                    {% endif%}
+                </span>
+
+                {% if list.10 == '0' %}
+                <span id="10">
+                    <input type="checkbox" class="btn-check" id="btncheck10" name="id" autocomplete="off" value="10">
+                    <label class="btn btn-outline-primary" for="btncheck10">3-4 pm</label>
+                </span>
+                {% endif%}
+
+                {% if list.11 == '0' %}
+                <span id="11">
+                    <input type="checkbox" class="btn-check" id="btncheck11" name="id" autocomplete="off" value="11">
+                    <label class="btn btn-outline-primary" for="btncheck11">4-5 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.12 == '0' %}
+                <span id="12">
+                    <input type="checkbox" class="btn-check" id="btncheck12" name="id" autocomplete="off" value="12">
+                    <label class="btn btn-outline-primary" for="btncheck12">5-6 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.13 == '0' %}
+                <span id="13">
+                    <input type="checkbox" class="btn-check" id="btncheck13" name="id" autocomplete="off" value="13">
+                    <label class="btn btn-outline-primary" for="btncheck13">6-7 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.14 == '0' %}
+                <span id="14">
+                    <input type="checkbox" class="btn-check" id="btncheck14" name="id" autocomplete="off" value="14">
+                    <label class="btn btn-outline-primary" for="btncheck14">7-8 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.15 == '0' %}
+                <span id="15">
+                    <input type="checkbox" class="btn-check" id="btncheck15" name="id" autocomplete="off" value="15">
+                    <label class="btn btn-outline-primary" for="btncheck15">8-9 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.16 == '0' %}
+                <span id="16">
+                    <input type="checkbox" class="btn-check" id="btncheck16" name="id" autocomplete="off" value="16">
+                    <label class="btn btn-outline-primary" for="btncheck16">9-10 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.17 == '0' %}
+                <span id="17">
+                    <input type="checkbox" class="btn-check" id="btncheck17" name="id" autocomplete="off" value="17">
+                    <label class="btn btn-outline-primary" for="btncheck17">10-11 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.18 == '0' %}
+                <span id="18">
+                    <input type="checkbox" class="btn-check" id="btncheck18" name="id" autocomplete="off" value="18">
+                    <label class="btn btn-outline-primary" for="btncheck18">11-12 pm</label>
+                    {% endif%}
+                </span>
+                {% if list.19 == '0' %}
+                <span id="19">
+                    <input type="checkbox" class="btn-check" id="btncheck19" name="id" autocomplete="off" value="19">
+                    <label class="btn btn-outline-primary" for="btncheck19">12-1 am</label>
+                </span>
+                {% endif%}
+
+            </div>
+
+            <!-- <div class="form-check form-check-inline">
+                
+                <button></button>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox{{slot.id}}" value="{{slot.time_slot}}">
+                <label class="form-check-label btn" for="inlineCheckbox1">{{slot.time_slot}}</label>
+              </div> -->
+
+        </div>
+
+        <div class="container d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Proceed</button>
+        </div>
+    </form>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!--Used for Icons-->
+    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+    <script>
+        let selectedDate = "{{selectedDate}}";
+        let currentDate = "{{currentDate}}";
+        var today = new Date();
+        currentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        time = "";
+
+        if (selectedDate == currentDate) {
+            for (let i = 4; i <= 19; i++) {
+                switch (i) {
+                    case 1:
+                        time = "06:00:00";
+                        if (currentTime > time && "{{list.1}}" === '0') {
+                            document.getElementById("1").style.visibility = "hidden";
+                        }
+                        break;
+                    case 2:
+                        time = "07:00:00";
+                        if (currentTime > time && "{{list.2}}" === '0') {
+                            document.getElementById("2").style.visibility = "hidden";
+                        }
+                        break;
+                    case 3:
+                        time = "08:00:00";
+                        if (currentTime > time && "{{list.3}}" === '0') {
+                            document.getElementById("3").style.visibility = "hidden";
+                        }
+                        break;
+                    case 4:
+                        time = "09:00:00";
+                        if (currentTime > time && "{{list.4}}" === '0') {
+                            document.getElementById("4").style.visibility = "hidden";
+                        }
+                        break;
+                    case 5:
+                        time = "10:00:00";
+                        if (currentTime > time && "{{list.5}}" === '0') {
+                            document.getElementById("5").style.visibility = "hidden";
+                        }
+                        break;
+                    case 6:
+                        time = "11:00:00";
+                        if (currentTime > time && "{{list.6}}" === '0') {
+                            document.getElementById("6").style.visibility = "hidden";
+                        }
+                        break;
+                    case 7:
+                        time = "12:00:00";
+                        if (currentTime > time && "{{list.7}}" === '0') {
+                            document.getElementById("7").style.visibility = "hidden";
+                        }
+                        break;
+                    case 8:
+                        time = "13:00:00";
+                        if (currentTime > time && "{{list.8}}" === '0') {
+                            document.getElementById("8").style.visibility = "hidden";
+                        }
+                        break;
+                    case 9:
+                        time = "14:00:00";
+                        if (currentTime > time && "{{list.9}}" === '0') {
+                            document.getElementById("9").style.visibility = "hidden";
+                        }
+                        break;
+                    case 10:
+                        time = "15:00:00";
+                        if (currentTime > time && "{{list.10}}" === '0') {
+                            document.getElementById("10").style.visibility = "hidden";
+                        }
+                        break;
+                    case 11:
+                        time = "16:00:00";
+                        if (currentTime > time && "{{list.11}}" === '0') {
+                            document.getElementById("11").style.visibility = "hidden";
+                        }
+                        break;
+                    case 12:
+                        time = "17:00:00";
+                        if (currentTime > time && "{{list.12}}" === '0') {
+                            document.getElementById("12").style.visibility = "hidden";
+                        }
+                        break;
+                    case 13:
+                        time = "18:00:00";
+                        if (currentTime > time && "{{list.13}}" === '0') {
+                            document.getElementById("13").style.visibility = "hidden";
+                        }
+                        break;
+                    case 14:
+                        time = "19:00:00";
+                        if (currentTime > time && "{{list.14}}" === '0') {
+                            document.getElementById("14").style.visibility = "hidden";;
+                        }
+                        break;
+                    case 15:
+                        time = "20:00:00";
+                        if (currentTime > time && "{{list.15}}" === '0') {
+                            document.getElementById("15").style.visibility = "hidden";
+                        }
+                        break;
+                    case 16:
+                        time = "21:00:00";
+                        if (currentTime > time && "{{list.16}}" === '0') {
+                            document.getElementById("16").style.visibility = "hidden";
+                        }
+                        break;
+                    case 17:
+                        time = "22:00:00";
+                        if (currentTime > time && "{{list.17}}" === '0') {
+                            document.getElementById("17").style.visibility = "hidden";
+                        }
+                        break;
+                    case 18:
+                        time = "23:00:00";
+                        if (currentTime > time && "{{list.18}}" === '0') {
+                            document.getElementById("18").style.visibility = "hidden";
+                        }
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
