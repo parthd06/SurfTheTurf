@@ -26,7 +26,7 @@ urlpatterns = [
     path('orderHistory', views.orderHistory, name="orderHistory"),
     path('allBookings', views.allBookings, name="allBookings"),
     # path('searchBooking', views.searchBooking, name="searchBooking"),
-    path('Booked', views.Booked, name="Booked"),
+    # path('Booked', views.Booked, name="Booked"),
     # path('email/', include(email_urls)),
     path('delete_booking/<int:id>', views.delete_booking, name="delete_booking"),
      path('success', views.success, name='success')
