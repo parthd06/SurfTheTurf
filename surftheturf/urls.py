@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('turf.urls')),
     path('admin/', admin.site.urls),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),    
 ]
