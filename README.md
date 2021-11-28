@@ -2,8 +2,6 @@
 # Turf Booking Website - **SurfTheTurf**
 
 
-
-
 ## Problem Statement:
 With less availability of Open Grounds, turfs has emerged as a new way for
 everyone to get around and play together at reasonable rates. As booking turf is
@@ -35,13 +33,6 @@ Or
 
 [Checkout this Demo video]()
  -->
-
-## Documentation:
-[Final Report](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_FinalReport.docx.pdf)
-
-[Final Presentation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_Final_Presentation.pptx)
-
-[Business Model Canvas](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/the-business-model-canvas-1.pdf)
 
 ## Features:
 
@@ -112,6 +103,12 @@ Contact Us Page:
 
 ![App Screenshot14](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss14.png)
 
+## Documentation:
+[Final Report](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_FinalReport.docx.pdf)
+
+[Final Presentation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_Final_Presentation.pptx)
+
+[Business Model Canvas](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/the-business-model-canvas-1.pdf)
 
 ## References:
 
