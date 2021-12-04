@@ -347,7 +347,7 @@ def slot_details(request):
 
     print("Matrix After")
     print(matrix.week)
-    return render(request, 'turfbooking.html', {'currentDate': currentDate, 'selectedDate': selectedDate,  'list': ls})
+    return render(request, 'turfBooking.html', {'currentDate': currentDate, 'selectedDate': selectedDate,  'list': ls})
 
 
 def turfDateSelection(request):
