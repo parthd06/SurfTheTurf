@@ -30,7 +30,7 @@ def index(request):
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     ]
-    matrix = Bookings(week = days)
+    matrix = bookslot(week = days)
     matrix.save()
     if request.user.is_authenticated:
         username = request.user.username
