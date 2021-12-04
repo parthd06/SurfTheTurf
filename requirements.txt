@@ -1,6 +1,7 @@
 asgiref==3.4.1
 certifi==2021.10.8
 charset-normalizer==2.0.7
+dj-database-url==0.5.0
 Django==3.2.8
 django-email-verification==0.1.0
 gunicorn==20.1.0
