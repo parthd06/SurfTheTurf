@@ -43,17 +43,6 @@ Or
 - Discount Vouchers
 - Razorpay Payment Gateway
 
-## Tech Stack Used
-**Front-End:**
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **Bootstrap**
-
-**Back-End:**
-- **Python(Django)**
-- **Postgre**
-
 ## Screenshots:
 **Main Page:**
 
@@ -102,6 +91,17 @@ About Us page:
 Contact Us Page:
 
 ![App Screenshot14](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss14.png)
+
+## Tech Stack Used
+**Front-End:**
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Bootstrap**
+
+**Back-End:**
+- **Python(Django)**
+- **Postgre**
 
 ## Documentation:
 [Final Report](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Documentations/SurfTheTurf_FinalReport.docx.pdf)
