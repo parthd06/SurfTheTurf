@@ -42,8 +42,6 @@ check the availability of the turf, select timings, and view booking history.
 
 ![App Screenshot1](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss1.png)
 
-![App Screenshot2](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss2.png)
-
 **Sign Up Page:**
 
 ![App Screenshot3](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss3.png)
