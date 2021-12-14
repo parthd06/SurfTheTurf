@@ -1,13 +1,21 @@
 
 # Turf Booking Website - **SurfTheTurf**
 
-
 ## Problem Statement:
 With less availability of Open Grounds, turfs has emerged as a new way for
 everyone to get around and play together at reasonable rates. As booking turf is
 an ordeal for people to locate, fetch details according to their requirements, it
 has become a necessity to have a solution to book turf on the go. Users can
 check the availability of the turf, select timings, and view booking history.
+
+## Demo:
+[Checkout our Website](https://surftheturf.herokuapp.com/)
+
+You can try it out for yourself by using the following test-user credentials on the website:
+
+Username: 
+
+Password: 
 
 ## Group Members:
 - [@parthdali](https://github.com/parthd06)
@@ -19,20 +27,6 @@ check the availability of the turf, select timings, and view booking history.
 ## Additional Collaborators:
 - [@hitanshuparekh](https://github.com/hparekh72)
 - [@bhavyeshshah](https://github.com/Bhavyeshshah)
-
-<!-- ## Demo:
-You can try it out for yourself by using the following credentials on the website:
-
-Username: 
-
-Password: 
-
-[Checkout our Website]()
-
-Or 
-
-[Checkout this Demo video]()
- -->
 
 ## Features:
 
