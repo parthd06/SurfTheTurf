@@ -30,12 +30,12 @@ check the availability of the turf, select timings, and view booking history.
 
 ## Features:
 
-- Responsive & Mobile Friendly
-- Advance Reservations and online booking
-- Real-time alerts & notifications
-- Updated Slot booking
+- Email Confirmation on Booking
+- Advance Reservations and Online Booking
+- Real-time slot updates
 - Discount Vouchers
 - Razorpay Payment Gateway
+- Responsive & Mobile Friendly
 
 ## Screenshots:
 **Main Page:**
