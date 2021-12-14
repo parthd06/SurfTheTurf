@@ -11,7 +11,7 @@ check the availability of the turf, select timings, and view booking history.
 ## Demo:
 [Checkout our Website](https://surftheturf.herokuapp.com/)
 
-**You can try it out for yourself by using the following test-user credentials on the website:**
+**You can also try it out for yourself by using the following test-user credentials on the website:**
 
 **Username:** demo
 
