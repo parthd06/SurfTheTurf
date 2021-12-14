@@ -10,7 +10,10 @@ has become a necessity to have a solution to book turf on the go. Users can
 check the availability of the turf, select timings, and view booking history.
 
 ## Group Members:
-- [@parthdali](https://github.com/parthd06)
+- ParthDali
+<p>
+<a href="https://www.linkedin.com/in/parth-dali/" target="_blank"><img align="center" src="https://github.com/parthd06/parthd06/blob/main/Assets/Social_Icons/linked-in-alt.svg" 
+</p>
 - [@pranavdalvi](https://github.com/PRANAVD-10)
 - [@pranavbangera](https://github.com/pranavb18)
 - [@shivambhosale](https://github.com/ShivamB10)
