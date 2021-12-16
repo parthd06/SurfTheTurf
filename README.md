@@ -37,7 +37,7 @@ check the availability of the turf, select timings, and view booking history.
 - Razorpay Payment Gateway
 - Responsive & Mobile Friendly
 
-## Screenshots:
+## Project Screenshots:
 **Main Page:**
 
 ![App Screenshot1](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss1.png)
