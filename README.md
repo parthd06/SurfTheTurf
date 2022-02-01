@@ -74,6 +74,10 @@ Order History:
 
 ![App Screenshot11](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss11.png)
 
+After payment through razorpay mail confirmation:
+
+![Gmail Confirmation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss11.png)
+
 About Us page:
 
 ![App Screenshot12](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss12.png)
