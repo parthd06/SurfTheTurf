@@ -76,7 +76,7 @@ Order History:
 
 After payment through razorpay mail confirmation:
 
-![Gmail Confirmation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss11.png)
+![Gmail Confirmation](https://github.com/parthd06/SurfTheTurf/blob/main/Extras/Screenshots/ss15.png)
 
 About Us page:
 
