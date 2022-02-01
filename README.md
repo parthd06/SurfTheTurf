@@ -8,14 +8,19 @@ an ordeal for people to locate, fetch details according to their requirements, i
 has become a necessity to have a solution to book turf on the go. Users can
 check the availability of the turf, select timings, and view booking history.
 
-## Demo:
-[Checkout our Website](https://surftheturf.herokuapp.com/)
+## Demo Video:
+
+[](https://user-images.githubusercontent.com/56031116/152031670-5d5607cd-7de4-42b1-8b92-cb1b72d698b1.mp4)
+
+## Hosted Website:
+
+- Checkout our Website[@surftheturf.herokuapp.com/](https://surftheturf.herokuapp.com/)
 
 **You can also try it out for yourself by using the following test-user credentials on the website:**
 
-**Username:** demo
+- **Username:** demo
 
-**Password:** demo1
+- **Password:** demo1
 
 ## Group Members:
 - [@parthdali](https://github.com/parthd06)
