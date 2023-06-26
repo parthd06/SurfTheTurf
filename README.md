@@ -12,15 +12,15 @@ check the availability of the turf, select timings, and view booking history.
 
 [](https://user-images.githubusercontent.com/56031116/152095179-09578948-ea65-4d6e-8377-d955e9d71715.mp4)
 
-## Hosted Website:
+<!---- ## Hosted Website:
 
-- Checkout our Website[@surftheturf.herokuapp.com/](https://surftheturf.herokuapp.com/)
+Checkout our Website[@surftheturf.herokuapp.com/](https://surftheturf.herokuapp.com/)
 
 **You can also try it out for yourself by using the following test-user credentials on the website:**
 
 - **Username:** demo
 
-- **Password:** demo1
+- **Password:** demo1 --->
 
 ## Group Members:
 - [@parthdali](https://github.com/parthd06)
