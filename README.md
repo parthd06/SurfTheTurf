@@ -29,9 +29,11 @@ Checkout our Website[@surftheturf.herokuapp.com/](https://surftheturf.herokuapp.
 - [@shivambhosale](https://github.com/ShivamB10)
 - [@harshkumarbhikadiya](https://github.com/Harshbhikadiya29)
 
+<!----
 ## Additional Collaborators:
 - [@hitanshuparekh](https://github.com/hparekh72)
 - [@bhavyeshshah](https://github.com/Bhavyeshshah)
+--->
 
 ## Features:
 
